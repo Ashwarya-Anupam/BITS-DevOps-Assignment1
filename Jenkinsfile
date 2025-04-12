@@ -45,9 +45,6 @@ pipeline {
         }
 
         stage('Deploy to Production') {
-            when {
-                branch 'main'
-            }
             steps {
                 echo "🚀 Deploying to PRODUCTION from branch: ${env.BRANCH_NAME}"
                 // your production deploy logic here
